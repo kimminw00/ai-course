@@ -1,0 +1,41 @@
+1. supervised and unsupervised 한 기계학습 방법에 대한 차이점에 대하여 설명하시오.
+supervised는 데이터에 대한 명시적인 정답이 주어진 상태에서 학습하는 방법이다. unsupervised는 데이터에 대한 명시적인 정답이 없는 상태에서 데이터에 숨겨진(Hidden) 특징이나 구조를 발견해서 스스로 학습하는 방법이다.
+
+2. classification / regression 차이점에 대하여 설명하시오
+Classification은 주어진 데이터를 정해진 카테고리에 따라 분류하는 문제이다. Regression은 주어진 데이터를 사용해서 연속된 값을 예측하는 문제를 말합니다. 
+
+3. holdout 방식과 cross-validation 방식의 차이에 대하여 설명하시오.
+cross-validation방식은 주어진 데이터를 training / test data로 나누는 방식이고,
+holdout방식은 training데이터를 다시 나누어서 training / validation / test data로 나누는 방식이다.
+
+4. 차원의 저주가 무엇이고 이를 극복하기 위한 방법에 대하여 설명하시오.
+훈련 데이터에서 많은 특성을 가지고 있을 때, 훈련을 느리게 할 뿐만 아니라 최적의 솔루션을 찾기 어렵게 만드는 현상입니다. 극복하기 위해서 feature extraction이나  PCA를 사용해서 특성을 줄일 수 있습니다.
+
+5. training / test data가 필요한 이유에 대하여 설명하시오
+training 데이터로 모델을 학습시킨 이후에 test data로 model의 성능을 확인하기 위해서 training 데이터와 test data로 나누었다.
+
+6. feature selection에 관한 3가지 방식에 대하여 설명하시오
+Filter method는 모델에 적용하기 전에 변수를 걸러낸다. 상관계수와 같은 통계적 지표를 사용하여 순위를 매기고, 영향력이 적은 변수는 제외하는 방식으로 작동한다.
+Wrapper method는 가장 이상적인 변수의 조합을 찾는 방식이다. 여러 변수가 존재할 때, 그 변수들의 조합을 다르게 하면서 학습을 진행하는 것이다. 완료된 모델 중 점수가 가장 높은 조합을 선택한다.
+Embedded method다. Embedded method는 모델의 학습 및 생성 과정에서 최적의 변수를 선택한다. Wrapper method는 모든 조합의 학습을 마친 결과를 비교하는데 비해, Embedded method는 학습 과정에서 최적화된 변수를 선택한다는 점에서 차이가 있다.
+
+7. Bias-Variance Trade-off Precision Recall Trade-off에 대하여 설명하시오.
+Bias-Variance Trade-off는 "bias와 variance 모두가 낮은 모델을 만드는 것은 힘들다"는 특성이다. Precision Recall Trade-off는 Type 1 error와 Type 2 error 둘 다 커지거나 작아질 수 없는 특성이다.
+
+8. regularization이 무엇이고 왜 필요한지에 대하여 설명하시오.
+regularization은 feature의 값들을 특정 함수를 이용하여 모두 같은 범위에 존재할 수 있도록 조절하는 과정이다. 특정 feature의 모델 학습에 영향력을 낮추기 위해서 사용한다. 
+
+9. ensemble 기법에 대하여 설명하시오.
+Ensemble 방법은 더 좋은 예측 성능을 얻기위해 다수의 학습 알고리즘을 사용하는 방법이다. 
+
+10. clustering 방법 및 특징에 대하여 설명하시오
+k-means알고리즘 
+1. random한 데이터로 시작해서 
+2. 나머지 데이터들을 random 데이터에서 가장 가까운 데이터와 같은 종류로 분류한 다음 
+3. 클러스터의 중심점을 이동시킨다.
+중심점이 수렴할 때 까지 2,3번의 과정을 반복하는 것이 k-means알고리즘 방법이다.
+특징 : cluster가 몇 개 일지 내가 정해줘야 함. 초기값에 따라서 실패 성공할확률이 있다.
+
+AgglomerativeClustering :
+가까운 점 끼리 묶어서 cluster를 만드는 알고리즘이다.
+특징 : 내가 단계별로 쪼갤 정도(k값을 고를 수 있음)를 고를 수 있다.(과정을 살펴볼 수 있다.)
